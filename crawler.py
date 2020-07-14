@@ -44,7 +44,7 @@ try:
                     print(tags_string)
                     
                     sql = '''
-                    INSERT INTO `new_media`.`news`(`title`,`date`,`tags`,`brand`)
+                    INSERT INTO `new_media`.`news`(`title`,`date`,`tag`,`brand`)
                     VALUE("{}","{}","{}","{}")
                     '''.format(title,date,tags_string,"inside")
                     cursor.execute(sql)
@@ -74,7 +74,7 @@ try:
                     
 
                     sql = '''
-                    INSERT INTO `new_media`.`news`(`title`,`date`,`tags`,`share`,`brand`)
+                    INSERT INTO `new_media`.`news`(`title`,`date`,`tag`,`share`,`brand`)
                     VALUE("{}","{}","{}","{}","{}")
                     '''.format(title,date,tags_string,share,"technews")
                     cursor.execute(sql)
