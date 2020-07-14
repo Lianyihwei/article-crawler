@@ -20,7 +20,7 @@ options.add_argument('--headless')
 options.experimental_options["prefs"] = {"profile.default_content_settings": {"images": 2},
                                         "profile.managed_default_content_settings": {"images":2}}
 
-driver = webdriver.Chrome("/Users/lianyihwei/Applications/webDrive/chromedriver", chrome_options=options)
+driver = webdriver.Chrome(os.getcwd()+"/chromedriver", chrome_options=options)
 
 try:
     with connection.cursor() as cursor:
